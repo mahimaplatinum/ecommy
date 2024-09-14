@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("https://static.vecteezy.com/system/resources/previews/023/128/305/non_2x/otp-one-time-password-login-code-verification-concept-icon-in-line-style-design-isolated-on-white-background-editable-stroke-vector.jpg");
+            background-repeat: no-repeat;
+            background-size:800px;
+            font-family: 'Courier New';
+
+        }
+    </style>
+</head>
+<!doctype html>
+<title>My Application</title>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+{% block body %}{% endblock %}
+<body>
+  <form method="post">
+    <center><input type="" name="OTP" placeholder="Enter OTP"></center>
+    <center><button>Submit</button></center>
+  </form>
+</body>
+</html>

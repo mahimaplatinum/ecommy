@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("https://plus.unsplash.com/premium_photo-1661405578751-dc9d663710bd?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" );
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        .admin{
+            color: brown;
+        }
+        .submit{
+            background-color: rgb(242, 240, 245);
+            color: rgb(3, 3, 3);
+        }
+    </style>
+<!doctype html>
+<title>My Application</title>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+     <center><li>{{ message }}</li></center>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+{% block body %}{% endblock %}
+<body>
+    <form method="post" action="{{url_for('admincreate')}}">
+        <center>
+            <h2 class="admin">Admin Login</h2>
+            <label for="" class="name">Name:</label>
+            <input type="text" name="username" placeholder="Enter Admin Name" /><br><br>
+            <label for="">Email:</label>
+            <input type="email" name="email" placeholder="Enter Admin Email" /><br><br>
+            <label for="" name="password">Password:</label>
+            <input type="password" name="password" placeholder="Enter Admin Password" /><br><br>
+            <textarea name="address" id="" >Enter address</textarea><br><br>
+            <button class="submit">Submit</button>
+    </form>
+
+    </center>
+</body>
+
+</html>

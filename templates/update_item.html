@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    body{
+        display: flex;
+        background-color: beige;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-repeat: no-repeat;
+        
+    }
+    
+    
+    
+   </style>
+</head>
+{% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <center>{{ message }}</center>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    {% block body %}{% endblock %}
+<body>
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+    <h1 class="add">Add Item</h1>
+    <label class="">Name:</label><br>
+    <input type="text" name="item" value="{{item_data[1]}}" placeholder="Name of the item"><br><br>
+    <label>Item Description:</label><br>
+    <input type="text" name="description" value="{{item_data[6]}}"placeholder="Description of the item"><br><br>
+    <label>Price:</label><br>
+    <input type="number" value="{{item_data[3]}}"name="price" placeholder="Price of the item"><br><br>
+    <label>Quantity</label><br>
+    <input type="number" value="{{item_data[4]}}"name="quantity" ><br><br>
+    <img src="/static/{{item_data[2]}}" class="card-img-top" alt="..." width="50%">
+
+    <label>Image</label><br>
+    <input type="file" value="{{item_data[2]}}"name="image"><br><br>
+    
+    <select name="category" id=""class="box" >
+        <option value="">Select Category</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Grocery">Grocery</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Home_appliances">Home</option>
+
+        
+
+    </select><br><br>
+    <button>Submit</button>
+
+    </form>
+    </div>
+</body>
+</html>

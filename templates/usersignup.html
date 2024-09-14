@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("https://img.freepik.com/free-photo/sign-up-user-password-privacy-concept_53876-123680.jpg?w=740&t=st=1725900681~exp=1725901281~hmac=e3eeb529ef086e018d00dc98583ac55bb85ad0826aab553f51ece10234040767");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <center>
+    <form method="post" action="{{url_for('usercreate')}}">
+        <h2>User Signup</h2>
+        <label for="">Name:</label>
+        <input type="text" placeholder="Enter Username" name="username"><br><br>
+        <label for="">Email:</label>
+        <input type="email" name="email" id="" placeholder="Enter Email"><br><br>
+        <label for="">Address</label>
+        <input type="text" name="address" id="" placeholder="Enter Address"><br><br>
+        <label for="">Password:</label>
+        <input type="password" name="password" id="" placeholder="Enter Password"><br><br>
+        <select name="gender" id="" class="box" >
+        <option value="">Select Gender</option><br><br>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select><br><br>
+        <button>submit</button>
+    
+        
+    </center>
+    </form>
+</body>
+</html>

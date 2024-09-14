@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    body{
+        display: flex;
+        background-image:url("https://cdn-icons-png.flaticon.com/512/8970/8970722.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+   </style>
+</head>
+<body>
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+    <h1>Add Item</h1>
+    <label>Name:</label><br>
+    <input type="text" name="item" placeholder="Name of the item"><br><br>
+    <label>Item Description:</label><br>
+    <input type="text" name="description" placeholder="Description of the item"><br><br>
+    <label>Price:</label><br>
+    <input type="number" name="price" placeholder="Price of the item"><br><br>
+    <label>Quantity</label><br>
+    <input type="number" name="quantity"><br><br>
+    <label>Image</label><br>
+    <input type="file" name="image"><br><br>
+    
+    <select name="category" id=""class="box" required>
+        <option value="">Select Category</option><br><br>
+        <option value="Electronics">Electronics</option>
+        <option value="Grocery">Grocery</option>
+        <option value="Fashion">Fashion</option>
+        <option value="'Home_appliances">Home</option>
+        
+
+    </select>
+    <button>Submit</button>
+
+    </form>
+    </div>
+</body>
+</html>

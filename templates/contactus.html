@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url('https://images.websitebuilderexpert.com/wp-content/uploads/2023/02/13045442/Contact-Us-Page-Examples.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="{{url_for('contactus')}}">
+       <center><h2>Contact us</h2>
+        <p><label for="">Name:</label>
+        <input type="text" placeholder="Enter your Name"></p>
+        <p><label for="">Email:</label>
+        <input type="text" placeholder="Enter your Email"></p>
+        <p>Message</label>
+        <input type="text" placeholder="Enter your message"></p></center>
+    </form>
+</body>
+</html>

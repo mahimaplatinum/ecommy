@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("https://wallpaperaccess.com/full/2314950.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .admin{
+            color:burlywood
+        }
+        .user{
+            color: bisque;
+        }
+        .password{
+            color: bisque;
+        }
+        .submit{
+            background-color: blueviolet;
+            color: burlywood;
+        }
+    </style>
+</head>
+{% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <center>{{ message }}</center>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    {% block body %}{% endblock %}
+<body>
+    <center>
+        <form method="post" action="{{url_for('userlogin')}}" >
+        <h2 class="admin">User Login</h2>
+    <label for="#" class="user">Email:</label>
+    <input type="text" name="email" placeholder="Enter Email"><br><br>
+    <label for="" class="password">Password:</label>
+    <input type="password" name="password" id="" placeholder="Enter Password"><br><br>
+    
+    <button class="submit">Submit</button></center>
+</form>
+<a href="#">Forgot password</a>
+
+</body>
+</html>
